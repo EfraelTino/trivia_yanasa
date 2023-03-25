@@ -69,16 +69,45 @@
     .conecate {
         width: 250px;
     }
-    .btn-comienza{
+
+    .btn-comienza {
         background: none;
         border: none;
     }
+
     .comienza_ahora_imagen {
-        width: 250px;      
-    }
-    .modal_terminos{
         width: 250px;
     }
+
+    .modal-dialog {
+        background: url(img/3.png);
+        border-radius: 50px;
+        background-position: left;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .lista_terminos {
+        width: 300px;
+    }
+
+    .resp {
+        border-radius: 50px;
+    }
+
+    .modal_terminos {
+        width: 250px;
+    }
+
+    .bingo {
+        width: 220px;
+    }
+
+    .label-title {
+        font-weight: 500;
+        font-style: italic;
+    }
+
     @media (min-device-width: 576px) and (max-device-width: 768px) {
         .carousel-caption {
             top: 20%;
@@ -89,7 +118,23 @@
         }
 
         .desmuetra_tu_grandeza {
-            width: 480px;
+            width: 450px;
+        }
+
+        .modal_terminos {
+            width: 400px;
+        }
+
+        .lista_terminos {
+            width: 490px;
+        }
+
+        .modal-dialog {
+            margin: 30px auto;
+        }
+
+        .bingo {
+            width: 320px;
         }
 
     }
@@ -137,6 +182,20 @@
         .comienza_ahora_imagen {
             width: 350px;
         }
+
+        .modal_terminos {
+            padding-top: 4rem;
+            margin: 1rem;
+            width: 550px;
+        }
+
+        .lista_terminos {
+            width: 750px;
+        }
+
+        .bingo {
+            width: 320px;
+        }
     }
 
     @media (min-device-width:1500px) {
@@ -147,7 +206,9 @@
         .logo_nayasa {
             width: 500px;
         }
-
+        .comienza_ahora_imagen {
+            width: 350px;
+        }
         .desmuetra_tu_grandeza {
             width: 1200px;
         }
@@ -155,9 +216,15 @@
         .conecate {
             width: 350px;
         }
-
-        .comienza_ahora_imagen {
-            width: 350px;
+        .modal_terminos {
+            padding-top: 5rem;
+            width: 550px;
+        }
+        .lista_terminos {
+            width: 750px;
+        }
+        .bingo {
+            width: 320px;
         }
     }
 </style>
@@ -256,9 +323,9 @@
     </div>
     </div>
     <!-- MODAL TERMINOS Y CONDICIONES -->
-    <div class="modal fade" id="modalTerminos" tabindex="-1" aria-labelledby="modalTerminos"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg">
+    <div class="modal fade" id="modalTerminos" tabindex="-1" aria-labelledby="modalTerminos" aria-hidden="true">
+
+        <div class="modal-dialog modal-lg ">
             <div class="modal-content resp" style="background: none;">
                 <div class="modal-body ">
                     <div class="condiciones  d-flex justify-content-center align-items-center">
@@ -273,37 +340,31 @@
                                     <img src="img/terminos_codiciones.png" alt="" class="modal_terminos">
                                 </div>
                                 <div class="col-12 d-flex justify-content-center">
-                                    <img src="img/lista_terminos.png" alt="" width="300px">
+                                    <img src="img/lista_terminos.png" alt="" class="lista_terminos">
                                 </div>
-                                <div class="form-group col-12 py-1 pb-xxl-0">
+                                <div class="form-group ">
                                     <div class="form-check ">
                                         <input class="form-check-input mycheck" type="checkbox">
-                                        <label class="form-check-label label-title">
-                                         Acepto terminos y condiciones
+                                        <label class="form-check-label label-title text-white ml-4">
+                                            Acepto terminos y condiciones
                                         </label>
                                     </div>
                                     <div class="form-check ">
                                         <input class="form-check-input mycheck" type="checkbox">
-                                        <label class="form-check-label label-title">
+                                        <label class="form-check-label label-title text-white ml-4">
                                             Sí. autorizo el tratamiento de mis datos personales
                                         </label>
                                     </div>
                                 </div>
-                                <div class="col-12 py-4 text-end cont-ingresa pt-xxl-0">
-                                    <a href="4.html"
-                                        class="ingresa-trivia text-decoration-none text-white text-center">INGRESA
-                                        A LA TRIVIA VIRTUAL <span class="align-items-center"><svg
-                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                                <path fill-rule="evenodd"
-                                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-                                            </svg></span></a>
+                                <div class="col-12 py-4 text-center cont-ingresa pt-xxl-0">
+                                    <a href="4.html" class="ingresa-trivia text-decoration-none text-white text-center">
+                                        <img src="img/7.png" alt="Ingresar al Bingo" class="bingo">
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
