@@ -107,27 +107,28 @@ body {
 .numero_ganador {
   font-size: 1rem;
 }
-
-.bingoganado {
+#mi-imagen {
+  width: 200px; 
+  height: 200px;
   position: relative;
-  width: 100%;
-  height: 100%;
-  z-index: 100;
-  overflow: hidden;
+  animation-name: animar-imagen;
+  animation-duration: 3s; 
+  animation-iteration-count: infinite; 
+  animation-timing-function: ease-in-out; 
+        z-index: 1000;
 }
 
-.img_bingo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: transform 1s;
+@keyframes animar-imagen {
+  0% {
+    transform: scale(1); 
+  }
+  50% {
+    transform: scale(1.3); 
+  }
+  100% {
+    transform: scale(1); 
+  }
 }
-
-.img_bingo:hover {
-  transform: scale(1.3) translate(-50%, -50%);
-}
-
 
 .row_numeros {
   position: relative;
@@ -180,6 +181,17 @@ body {
   .bolitas {
     width: 45px;
   }
+  @keyframes animar-imagen {
+    0% {
+      transform: scale(1); 
+    }
+    50% {
+      transform: scale(1.5); 
+    }
+    100% {
+      transform: scale(1); 
+    }
+  }
 }
 
 @media screen and (min-width:768px) {
@@ -198,6 +210,17 @@ body {
   .bolitas {
     width: 40px;
   }
+  @keyframes animar-imagen {
+    0% {
+      transform: scale(1); 
+    }
+    50% {
+      transform: scale(2); 
+    }
+    100% {
+      transform: scale(1); 
+    }
+  }
 }
 
 
@@ -209,6 +232,17 @@ body {
 
   .bolitas {
     width: 50px;
+  }
+  @keyframes animar-imagen {
+    0% {
+      transform: scale(1); 
+    }
+    50% {
+      transform: scale(3); 
+    }
+    100% {
+      transform: scale(1); 
+    }
   }
 }
 
