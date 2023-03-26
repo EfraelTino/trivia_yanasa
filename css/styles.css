@@ -2,6 +2,200 @@
   margin: 0;
   padding: 0;
 }
-body{
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+.childs-4 {
+  background-image: url(../img/FONDO-NAYASA.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0%;
+  height: auto;
+  width: 100vw;
+  left: 0%;
+  transform: translate(0%, 0%);
+}
+
+.img_numeros {
+  width: 65px;
+}
+
+.contendor_numeros {
+  position: relative;
+}
+
+.child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.numero_grande {
+  position: relative;
+}
+
+.ficha_grande {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 5px;
+
+}
+
+.img_primero {
+  width: 120px;
+}
+
+.fichas_contenedor {
+  position: relative;
+}
+
+.grande_ganador,
+.numero_grande {
+  color: white;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.grande_ganador {
+  font-size: 1.5rem;
+}
+
+.numero_grande {
+  font-size: 1.5rem;
+}
+
+.fichas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  line-height: 5px;
+}
+
+.letra_ganador,
+.numero_ganador {
+  font-weight: 700;
+  font-style: italic;
+}
+
+.letra_ganador {
+  font-size: .8rem;
+}
+
+.numero_ganador {
+  font-size: 1rem;
+}
+
+
+
+.row_numeros {
+  position: relative;
+}
+
+.contenedor_numeros_rifa {
+  position: absolute;
+  top: 52.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.primero {
+  position: relative;
+}
+
+.fichas_escoger {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  line-height: 5px;
+}
+
+.btn_escoger {
+  background: none;
+  border: none;
+}
+
+.letra_escoger {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: .6rem;
+  font-weight: 700;
+  font-style: italic;
+}
+
+@media screen and (max-width:460px){
+  .bolitas {
+    width: 25px;
+  }
+  
+}
+@media screen and (min-width:576px){
+  .bolitas {
+      width: 45px;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .childs-4 {
+      height: 100vh;
+  }
+
+  .img_primero {
+      width: 200px;
+  }
+
+  .bolitas {
+      width: 35px;
+  }
+}
+@media screen and (min-width:920px){
+
+  .bolitas {
+      width: 40px;
+  }
+}
+
+
+@media screen and (min-width:1200px){
+  .childs-4 {
+      height: 100vh;
+  }
+
+  .img_primero {
+      width: 300px;
+  }
+
+  .bolitas {
+      width: 50px;
+  }
+}
+
+@media screen and (min-width:1500px) {
+  .childs-4 {
+      height: auto;
+  }
+
+  .img_primero {
+      width: 300px;
+  }
+
+  .bolitas {
+      width: 70px;
+  }
 }
