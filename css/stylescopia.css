@@ -56,8 +56,9 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   line-height: 5px;
+
 }
-.ficha_ganador{
+.btn_ganador{
   background: none;
   border: none;
 }
@@ -72,6 +73,9 @@ body {
 .img_9 {
   width: 320px;
 }
+.contenedor_numero_grande{
+  position: relative;
+}
 
 .grande_ganador,
 .numero_grande {
@@ -79,9 +83,11 @@ body {
   font-weight: 800;
   font-style: italic;
 }
-
 .grande_ganador {
   font-size: 1.5rem;
+  position: relative;
+  z-index: 1000 !important;
+  margin-bottom: -1rem !important;
 }
 
 .numero_grande {
@@ -120,7 +126,9 @@ body {
   animation-timing-function: ease-in-out; 
         z-index: 1000;
 }
-
+.condiciones{
+  background-color: rgba(0, 0, 0, .8);
+}
 @keyframes animar-imagen {
   0% {
     transform: scale(1); 
@@ -167,7 +175,7 @@ body {
   border: none;
   margin: 0;
   padding: 0;
-  color: white;
+  /*color: white;*/
   font-size: .6rem;
   font-weight: 700;
   font-style: italic;
@@ -388,6 +396,7 @@ body {
 
 
 @media screen and (min-width:576px) {
+  /* CAMBIOS-1 */
   .bolitas {
     width: 45px;
   }
@@ -409,16 +418,16 @@ body {
   .img_primero {
     width: 200px;
   }
-
+/* CAMBIOS-1 */
   .bolitas {
-    width: 35px;
+    width: 68px;
   }
 }
 
 @media screen and (min-width:920px) {
-
+/* CAMBIOS-1 */
   .bolitas {
-    width: 40px;
+    width: 58px;
   }
   @keyframes animar-imagen {
     0% {
@@ -439,9 +448,9 @@ body {
   .img_primero {
     width: 300px;
   }
-
+/* CAMBIOS-1 */
   .bolitas {
-    width: 50px;
+    width: 70px;
   }
   @keyframes animar-imagen {
     0% {
@@ -492,8 +501,25 @@ body {
   .img_primero {
     width: 300px;
   }
-
+/* CAMBIOS-1 */
   .bolitas {
-    width: 70px;
+    width: 76px;
   }
+}
+
+.tachado{
+  color: #ff0000;
+  background-color: #000;
+  
+}
+#bola{
+  font-size:50px;
+  display:block;
+  margin: 20px auto;
+  width: 5rem;
+  line-height: 5rem;
+  border-radius: 50%;
+  background-color: #000;
+  color: #FFF;
+  text-align:center;
 }

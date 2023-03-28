@@ -4,20 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name='viewport' content='width=device-width, initial-scale=0.5, maximum-scale=1.0, user-scalable=0' />
-    <title>Ganaste</title>
+    <title>Elección de número</title>
     <link rel="icon" type="image/png" href="imagenes/favicon.ico" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/stylescopia.css">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.0/dist/sweetalert2.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+        integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 </head>
 
 
 <body>
-    <style type="text/css">
-
-	</style>
-    <img id="mi-imagen" src="img/12.png">
 
     <div class="childs-4 m-0 p-0 d-flex justify-content-center">
         <div class="container m-0 p-0">
@@ -27,16 +28,22 @@
                 </div>
             </div>
             <div class="row m-0 p-0">
-                <div class="col-12 col-md-4 d-flex justify-content-center flex-column m-0 p-0">
+                <!-- CAMBIOS-1 -->
+                <div class="col-sm-12 col-lg-4 d-flex justify-content-center flex-column m-0 p-0">
+                    <!-- CAMBIOS-1 -->
                     <div class="d-flex justify-content-center">
                         <img src="img/desmuestra_tu_grandeza.png" alt="Grandeza" class="img_grandeza">
                     </div>
                     <div class="d-flex justify-content-center numero_grande">
-                        <img src="img/11_corregido.png" alt="" class="img_primero">
-                        <div class="ficha_grande">
-                            <p class="m-0 p-0 text-center grande_ganador">0</p><br>
-                            <h3 class="m-0 p-0 text-center numero_grande">34</h3>
-                        </div>
+                        <button class="btn_ganador" id="ficha_ganador">
+                            <img src="img/11_corregido.png" alt="Fondo de ficha" class="img_primero">
+                            <div class="ficha_grande d-flex justify-content-center" >
+                                <div class="ficha_ganador">
+                                    <p class="m-0 p-0 text-center grande_ganador">0</p><br>
+                                    <h3 class="m-0 p-0 text-center numero_grande" id="bola">34</h3>
+                                </div>
+                            </div>
+                        </button>
                     </div>
                     <div class="d-flex justify-content-center">
                         <div class="contendor_numeros">
@@ -75,7 +82,9 @@
 
                     </div>
                 </div>
-                <div class="col-12 col-md-8 d-flex justify-content-center m-0 p-0">
+                <!-- CAMBIOS-1 -->
+                <div class=" col-sm-12 col-lg-8 d-flex justify-content-center m-0 p-0 carton cartonJugador">
+                    <!-- CAMBIOS-1 -->
                     <div class="row row_numeros m-0 p-0">
                         <img src="img/13.png" alt="" width="310px">
                         <div class="contenedor_numeros_rifa co-12">
@@ -86,8 +95,8 @@
                                     <div class="d-flex fichas_contenedor">
                                         <button class="d-flex m-0 p-0 btn_escoger" id="1">
                                             <img src="img/10.png" alt="" class="bolitas">
-                                            <div class="fichas_escoger d-flex justify-content-center">
-                                                <p class="letra_escoger">01</p>
+                                            <div class="fichas_escoger d-flex justify-content-center numero n1">
+                                                <p class="letra_escoger"></p>
                                             </div>
                                         </button>
                                     </div>
@@ -258,7 +267,7 @@
                                 </div>
                                 <div class="col-1 d-flex justify-content-center align-items-center m-0 p-0">
                                     <div class="d-flex fichas_contenedor">
-                                        <button class="d-flex m-0 p-0 btn_escoger" id="16">
+                                        <button class="d-flex m-0 p-0 btn_escoger" id="18">
                                             <img src="img/10.png" alt="" class="bolitas">
                                             <div class="fichas_escoger d-flex justify-content-center">
                                                 <p class="letra_escoger">01</p>
@@ -1016,6 +1025,7 @@
                                 </div>
                                 <div class="col-1 primero">
                                 </div>
+
                             </div>
                         </div>
                     </div>
@@ -1023,19 +1033,8 @@
             </div>
         </div>
     </div>
-    <script>
-		function animarImagen() {
-			const miImagen = document.getElementById('mi-imagen');
-			miImagen.style.animationPlayState = 'running'; 
-			setTimeout(() => {
-				miImagen.style.animationPlayState = 'running'; 
-			}, 2000); 
-		}
 
-		const miImagen = document.getElementById('mi-imagen');
-		miImagen.addEventListener('mouseover', animarImagen);
-	</script>
-    <script src="index.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
